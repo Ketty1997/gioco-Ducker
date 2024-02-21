@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Regole Generiche*/
+body {
+    background-color: #d8eee8;
+    padding: 16px;
+    line-height: 1;
+    color: #001732;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+.game-container {
+    width: 436px;
+}
+
+/*Pannello di gioco*/
+h1 {
+    font-size: 40px;
+}
+
+.score {
+    font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*tabellone di gioco*/
+.game-board {
+    border: 2px solid #001732;
+    position: relative;
+}
+
+.grid {
+    height: calc(48px * 9);
+    width: calc(48px * 9);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.cell {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    background-size: contain;
+}
+
+.cell-dark {
+    background-color: #cbe0dd;
+}
+
+.river {
+    background-color: lightskyblue;
+}
+
+.road {
+    background-color: gray;
+    border-top: 1px dashed white;
+    border-bottom: 1px dashed white;
+}
+
+.wood {
+    background-image: url(images/wood.png);
+}
+
+.bus {
+    background-image: url(images/bus.png);
+}
+
+.car {
+    background-image: url(images/car.png);
+}
+
+.duck {
+    background-image: url(images/duck-walk.gif);
+}
+
+.duck-arrived {
+    background-image: url(images/duck-standing.png);
+}
+
+.duck-drowned {
+    background-image: url(images/duck-drowned.png);
+}
+
+.duck-hit {
+    background-image: url(images/duck-hit.png);
+}
+
+.river.duck {
+    background-image: url(images/duck-walk.gif), url(images/wood.png);
+}
+
+/*schermata di fine gioco*/
+.end-game-screen {
+    position: absolute;
+    background-color: rgba(241, 117, 78, 0.6);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+
+}
+
+.win {
+    background-color: rgba(78, 241, 187, 0.6);
+}
+
+.end-game-text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 48px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+button {
+    border: 2px solid;
+    font-size: 24px #001732;
+    font-family: 'Darker Grotesque', sans-serif;
+    text-transform: uppercase;
+    padding: 4px 20px 8px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(203, 224, 221);
+}
+
+.hidden {
+    display: none;
+}
